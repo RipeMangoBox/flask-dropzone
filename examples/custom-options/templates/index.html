@@ -1,3 +1,4 @@
+<!-- merged_index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,5 +13,10 @@
   {{ dropzone.load_js() }}
   {{ dropzone.config(custom_init='dz = this;document.getElementById("upload-btn").addEventListener("click", function handler(e) {dz.processQueue();});',
                      custom_options='autoProcessQueue: false, addRemoveLinks: true, parallelUploads: 20,') }}
+
+  <hr>
+
+  <h1>Processed Image</h1>
+  <img src="{{ processed_image_path }}" alt="Processed Image">
 </body>
 </html>
