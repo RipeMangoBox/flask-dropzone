@@ -1,0 +1,18 @@
+<form action="/mulfileupload/" method="post" enctype="multipart/form-data">
+    <input type="file" name="wenjian" multiple=""><button type="submit">上传</button>
+</form>{{ msg }}
+ 
+{% if filelist %}
+<p>文件列表</p>
+ 
+    {% for fn in filelist %}
+ 
+    <p><a href="/down/{{ fn }}/">{{ fn }}</a></p>
+ 
+    {% endfor %}
+ 
+{% endif %}
+{% for url in urllist %}
+ 
+    <img src="{{ url }}" width="100px">
+{% endfor %}
